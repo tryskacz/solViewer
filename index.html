@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Sun">
+<meta name="keywords" content="Sun">
+<meta name="author" content="Sun">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	</style>
+</head>
+<body>
+
+<!-- 	youtube embed link
+	https://www.youtube.com/embed/5e44tlfsExs
+	?version=3
+	&vq=highres - 4k 
+	&controls=0 - ovladani schovat
+	&showinfo=0 - titulek schovat
+	&autoplay=1 - autostart při načtení
+	&loop=1 - co asi
+	&playlist=5e44tlfsExs	- aby fungovalo co asi
+	&enablejsapi=1 - enable api
+	&start=1
+ -->
+<div id="menu">
+	<div id="innerMenu">
+					<div id="menuControl" onclick="menuControl();"><div id="menuControlBtn"></div></div>
+			<table>
+				<tr>
+					<th class="lighter">kolečko</th>
+					<td>normální zoom</td>
+				</tr>
+				<tr>					
+					<th class="lighter">Ctrl + kolečko</th>
+					<td>pomalejší zoom</td>
+				</tr>
+				<tr>					
+					<th class="lighter">Alt + kolečko</th>
+					<td>rychlejší zoom</td>
+				</tr>
+				<tr>					
+					<th class="lighter">Ctrl + Alt + kolečko</th>
+					<td>nejpomalejší zoom</td>
+				</tr>
+
+			</table>
+
+	</div>
+</div>
+<div id="centerOnLoad">
+	<div id="dragable">
+		<iframe id="iframe" src="https://www.youtube.com/embed/nMYvGYlrQ0I?version=3&vq=highres&controls=0&showinfo=0&autoplay=1&loop=1&playlist=nMYvGYlrQ0I&enablejsapi=1&start=1" frameborder="0" allow="autoplay; encrypted-media; "></iframe>
+		<canvas id="overlay"></canvas>
+	</div>
+</div>
+
+<div id="bottomWrapper">
+	<div id="bottomMenu">
+		<div id="innerBottomMenu">
+			<div id="bottomMenuControl" onclick="bottomMenuControl();"><div id="bottomMenuControlBtn"></div></div>
+			<div class="linkGroup">
+				<div class="videoLink" onclick="changeSource('5e44tlfsExs');"><img src="thumbs/5e44tlfsExs.webp"></div>
+				<div class="videoLink" onclick="changeSource('cUd3KTburF8');"><img src="thumbs/cUd3KTburF8.webp"></div>
+				<div class="videoLink" onclick="changeSource('jrSL8Q3Tbeg');"><img src="thumbs/jrSL8Q3Tbeg.webp"></div>
+				<div class="videoLink" onclick="changeSource('nMYvGYlrQ0I');"><img src="thumbs/nMYvGYlrQ0I.webp"></div>
+				<div class="videoLink" onclick="changeSource('p9HdnmLrqhc');"><img src="thumbs/p9HdnmLrqhc.webp"></div>
+				<div class="videoLink" onclick="changeSource('rc-fibOvj1E');"><img src="thumbs/rc-fibOvj1E.webp"></div>
+	
+		</div>
+		</div>
+
+</div>
+</div>
+
+
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
