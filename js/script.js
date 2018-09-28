@@ -180,11 +180,9 @@ function menuControl() {
   if (document.getElementById('menuControlBtn').style.marginBottom == '0px') {
     document.getElementById('menu').style.top = '0px';
     document.getElementById('menu').style.opacity = '1';
-    document.getElementById('menu').style.boxShadow = '0 0 8px #fff';
     document.getElementById('menuControlBtn').style.marginBottom = '8px';
   } else {
     document.getElementById('menu').style.top = '-76px';
-    document.getElementById('menu').style.boxShadow = 'none';
     document.getElementById('menuControlBtn').style.marginBottom = '0';
     document.getElementById('menu').style.opacity = '0.01';
 
@@ -195,13 +193,58 @@ function bottomMenuControl() {
   if (document.getElementById('bottomMenuControlBtn').style.marginBottom == '8px') {
     document.getElementById('bottomMenu').style.top = '0px';
     document.getElementById('bottomMenu').style.opacity = '1';
-    document.getElementById('bottomMenu').style.boxShadow = '0 0 8px #fff';
     document.getElementById('bottomMenuControlBtn').style.marginBottom = '2px';
   } else {
     document.getElementById('bottomMenu').style.top = '84px';
-    document.getElementById('bottomMenu').style.boxShadow = 'none';
     document.getElementById('bottomMenuControlBtn').style.marginBottom = '8px';
     document.getElementById('bottomMenu').style.opacity = '0.01';
 
   }
+}
+
+function leftMenuControl() {
+  if (document.getElementById('leftMenuControlBtn').style.marginLeft == '6px') {
+    document.getElementById('leftMenu').style.left = '0px';
+    document.getElementById('leftMenu').style.opacity = '1';
+    document.getElementById('leftMenuControlBtn').style.marginLeft = '-6px';
+  } else {
+    document.getElementById('leftMenu').style.left = '-242px';
+    document.getElementById('leftMenuControlBtn').style.marginLeft = '6px';
+    document.getElementById('leftMenu').style.opacity = '0.01';
+
+  }
+}
+
+
+var slRed = document.getElementById("slRed");
+var slGreen = document.getElementById("slGreen");
+var slBlue = document.getElementById("slBlue");
+var slAlpha = document.getElementById("slAlpha");
+
+
+slRed.oninput = function() {
+  showRgba();
+}
+slGreen.oninput = function() {
+  showRgba();
+}
+slBlue.oninput = function() {
+  showRgba();
+}
+slAlpha.oninput = function() {
+  showRgba();
+}
+
+function showRgba() {
+  var rgba = 'rgba('+slRed.value+','+slGreen.value+','+slBlue.value+','+slAlpha.value+')';
+  document.getElementById('overlayRgba').innerHTML = rgba;
+  document.getElementById('colorSquare').style.background = rgba;
+  document.getElementById('overlay').style.background = rgba;
+
+
+  var style = document.querySelector('[data="test"]');
+  style.innerHTML = ".slider.sl-red::-webkit-slider-thumb { background: rgba(255,0,0,"+(slRed.value/255)+") !important; }"+
+  ".slider.sl-green::-webkit-slider-thumb { background: rgba(0,255,0,"+(slGreen.value/255)+") !important; }"+
+  ".slider.sl-blue::-webkit-slider-thumb { background: rgba(0,0,255,"+(slBlue.value/255)+") !important; }"+
+  ".slider.sl-alpha::-webkit-slider-thumb { background: rgba(50,50,50,"+slAlpha.value+") !important; }";
 }

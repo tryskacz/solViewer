@@ -26,26 +26,26 @@
  -->
 <div id="menu">
 	<div id="innerMenu">
-					<div id="menuControl" onclick="menuControl();"><div id="menuControlBtn"></div></div>
-			<table>
-				<tr>
-					<th class="lighter">kolečko</th>
-					<td>normální zoom</td>
-				</tr>
-				<tr>					
-					<th class="lighter">Ctrl + kolečko</th>
-					<td>pomalejší zoom</td>
-				</tr>
-				<tr>					
-					<th class="lighter">Alt + kolečko</th>
-					<td>rychlejší zoom</td>
-				</tr>
-				<tr>					
-					<th class="lighter">Ctrl + Alt + kolečko</th>
-					<td>nejpomalejší zoom</td>
-				</tr>
+		<div id="menuControl" onclick="menuControl();"><div id="menuControlBtn"></div></div>
+		<table>
+			<tr>
+				<th class="lighter">kolečko</th>
+				<td>normální zoom</td>
+			</tr>
+			<tr>					
+				<th class="lighter">Ctrl + kolečko</th>
+				<td>pomalejší zoom</td>
+			</tr>
+			<tr>					
+				<th class="lighter">Alt + kolečko</th>
+				<td>rychlejší zoom</td>
+			</tr>
+			<tr>					
+				<th class="lighter">Ctrl + Alt + kolečko</th>
+				<td>nejpomalejší zoom</td>
+			</tr>
 
-			</table>
+		</table>
 
 	</div>
 </div>
@@ -55,6 +55,34 @@
 		<canvas id="overlay"></canvas>
 	</div>
 </div>
+
+<div id="leftWrapper">
+	<div id="leftMenu">
+		<div id="innerLeftMenu">
+			<div id="leftMenuContent">
+					
+				<div class="menubox colorOverlay">
+					<div class="menutitle">Overlay</div>
+					<div class="sliders">
+						<style data="test" type="text/css"></style>
+					<div class="slTitle">Red</div>	
+					<input type="range" min="0" max="255" value="0" class="slider sl-red" id="slRed" step="1">
+					<div class="slTitle">Green</div>
+					<input type="range" min="0" max="255" value="0" class="slider sl-green" id="slGreen" step="1">
+					<div class="slTitle">Blue</div>
+					<input type="range" min="0" max="255" value="0" class="slider sl-blue" id="slBlue" step="1">
+					<div class="slTitle">Alpha</div>
+					<input type="range" min="0" max="1" value="0" class="slider sl-alpha" id="slAlpha" step="0.01">
+					</div>
+					<div class="colorSquare" id="colorSquare"></div>
+					<div id="overlayRgba">rgba(0,0,0,0)</div>
+				</div>
+			</div>
+			<div id="leftMenuControl" onclick="leftMenuControl();"><div id="leftMenuControlBtn"></div></div>
+			
+		</div>
+	</div>
+</div>	
 
 <div id="bottomWrapper">
 	<div id="bottomMenu">
